@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.landing {
+  background-image: url('./assets/img-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.landing-title {
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.landing-title strong {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.landing-link {
+  line-height: 1;
+  color: #fff;
+}
+
+.banner-title a {
+  color: #1f2d3d;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+/* 
+  미디어 쿼리
+    -> 반응형 웹을 위해 꼭 알아야 하는 것.
+      * 반응형 웹
+        -> 접속한 디바이스의 사이즈에 맞춰서 웹 사이트 사이즈가 맞춰지는 것
+    1. viewport meta
+      -> 브라우저 창의 크기
+    2. media query
+    @media screen and (min-width: 768px) {
+      
+    }
+
+    vh -> viewport height !
+      viewport 에서 차지하는 비율 !
+
+
+
+      작은 사이즈에서 큰 사이즈로 제작을 하는 것이 좋다.    
+*/
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #ffc82c;
+}
+
+.banner-title {
+  font-size: 18px;
+}
+.banner-title a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh;
+}
+
+.landing-title {
+  text-align: right;
+  margin: 20px;
+}
+
+.landing-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  width: 160px;
+  height: 52px;
+  padding: 14px 17px;
+  margin: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    position: fixed;
+    bottom: auto;
+  }
+
+  .landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .landing-title {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .landing-link {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
