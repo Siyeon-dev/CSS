@@ -1,0 +1,83 @@
+/* ▼ WHERE YOUR CODE BEGINS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: 'Mulish', sans-serif;
+  background-color: #151b26;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 500px;
+  height: 216px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 210px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.loading-title {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.3333333333;
+  color: #151b26;
+  margin-bottom: 20px;
+  animation-name: flicker;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.progress-bar {
+  position: relative;
+  width: 300px;
+  height: 12px;
+  background: #e5eaef;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.progress-bar-gauge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  border-radius: 100px;
+  background-color: #13ce66;
+  animation-name: gauge;
+  animation-duration: 3000ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes gauge {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
